@@ -1,0 +1,83 @@
+section#content.portfolio {
+	
+	overflow-y: auto;
+	
+	nav {
+		
+		height:	100%;
+		
+		ul {
+			
+			display: 	flex;
+			height:		100%;
+			
+			li {
+				
+				background-color: 	rgba(255, 255, 255, 0.9);
+				margin-left: 		2px;
+				position: 			relative;
+				width: 				calc( 50% - 4px);
+				transition:			all 0.5s ease;
+				
+				height: 	100%;
+				z-index: 	100;
+				overflow: 	hidden;
+				
+				a {
+					display: 			flex;
+					align-items: 		center;
+					justify-content: 	center;
+					height: 			100%;
+					
+					h1 {
+						font-size: 50px;
+						transition:all 0.5s ease;
+					}
+				}
+				
+				&:hover {
+						
+					h1 {
+						color: white;
+					}
+					
+					background-color: $dark !important;
+				}
+	
+				
+				&.three {
+					
+								}
+				
+				&.develop {
+					
+					background-color: $lightGrey;
+					
+				}
+			}
+		}
+	}		
+}
+
+.brain-max-width-520 {
+	
+	section#content.portfolio {
+		
+		nav {
+		
+			ul {
+				
+				li {
+					
+					a {
+											
+						h1 {
+							
+							font-size: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+.defaultFont {
+	
+	font-family:	"Lato";
+	font-weight:	400;	
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@font-face {
+    font-family: 	'socialMedia';
+    src: 			url('../fonts/socialMedia.otf');
+}
+
+/* font-related */
+$hide:				0px;
+$normal:			400;
+$bold:				600;
+$smallestFontSize:	12px;
+$smallerFontSize:	14px;
+$smallFontSize:		16px;
+$middleFontSize:	22px;
+$bigFontSize:		24px;
+$biggerFontSize:	30px;
+$biggestFontSize:	50px;
+
+/*
+	colors
+*/
+
+$defaultFontColor:			black;
+$dark:						#191919;
+$grey:						#E8E8E8;
+$lightGrey:					#F7F7F7;
+
+	
+/*
+	dimensions
+*/
+$defaultFontColor:		black;
+$normalOpacity:			0.78;
+$opaqueOpacity:			0.98;
+
+/*
+	Mixins
+*/
+@mixin box-sizing($type) {
+
+	box-sizing: 			$type;
+	-moz-box-sizing: 		$type;
+	-webkit-box-sizing: 	$type;
+}
+
+@mixin border-radius($radius) {
+	
+	border-radius:			$radius;
+	-moz-border-radius: 	$radius;
+	-webkit-border-radius: 	$radius;
+}
+
+@mixin transition ($transition) {
+	
+	transition:						$transition;
+	-ms-transition:					$transition;
+	-moz-transition:				$transition;
+	-webkit-transition:				$transition;
+	-webkit-transform: 				translate3d(0, 0, 0);
+	-webkit-backface-visibility: 	hidden;
+	-webkit-perspective: 			1000;
+}
+
+@mixin transform ($transform) {
+	
+	transform:				$transform;
+	-ms-transform:			$transform;
+	-moz-transform:			$transform;
+	-webkit-transform:		$transform;
+}
+
+@mixin boxshadow ($boxshadow...) {
+	
+	box-shadow:				$boxshadow;
+	-webkit-box-shadow: 	$boxshadow;
+}
+
+@mixin gradient ($color, $gradient1, $gradient2) {
+	
+	background:		$color;
+	background:		-moz-linear-gradient( top, $gradient1, $gradient2 );
+	background:		-webkit-linear-gradient( top, $gradient1, $gradient2 );
+	background:		-o-linear-gradient( top, $gradient1, $gradient2 );
+	background:		-ms-linear-gradient( top, $gradient1, $gradient2 );
+	background:		linear-gradient( to bottom, $gradient1, $gradient2 );
+}
+
+@mixin column-count ($number) {
+	
+	-webkit-column-count: 	$number;
+	-moz-column-count: 		$number;
+	-ms-column-count:		$number;
+	column-count: 			$number;
+}
+
+@mixin column-gap ($gap) {
+	
+	-webkit-column-gap: 	$gap;
+	-moz-column-gap:		$gap;
+	-ms-column-gap:			$gap;
+	column-gap: 			$gap;
+}
+
+@mixin transition-delay($delay) {
+	
+	-webkit-transition-delay:	$delay;
+	transition-delay: 			$delay;
+}

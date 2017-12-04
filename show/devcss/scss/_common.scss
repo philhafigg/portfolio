@@ -1,0 +1,47 @@
+.brainFrame {
+	
+	color: 				$defaultFontColor;
+	height:				100%;					//	has to be set with javascript
+	margin:				0;
+	overflow:			hidden;
+	padding:			0;
+	position:			absolute;
+	width:				100%;
+	
+	*, span, p {
+		
+		letter-spacing: 				0.1em;
+		font-family: 					'Lato', sans-serif;
+		font-weight: 					400;
+		margin:							0;
+		padding:						0;
+		user-select:					none;
+		-ms-user-select: 				none;
+		-webkit-overflow-scrolling: 	touch;
+		-webkit-tap-highlight-color: 	transparent;
+	}
+	
+	*:focus {
+		
+		outline: 	0 none;
+	}
+	
+	a:link,  a:visited,  a:focus,  a:hover,  a:active {
+		
+		outline: 			0;
+		text-decoration: 	none;
+		-moz-outline:		0;
+		color: 				#000000;
+	}
+	
+	ul, li {
+		
+		list-style:				none;
+		list-style-position:	inside;
+	}
+	
+	table {
+		
+		border-collapse: 	collapse;
+	}					
+}

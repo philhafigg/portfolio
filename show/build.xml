@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<project name="Personal" default="main" basedir="/Sites/personal">	
+	
+	<!-- library paths -->
+	<property name="lib.dir" 				value="/usr/local/Cellar/yuicompressor/2.4.8/libexec" />	
+	<property name="yui-compressor" 		location="${lib.dir}/yuicompressor-2.4.8.jar" />
+	
+	<!-- common file paths -->	
+	<property name="vein.dir" 				value="${basedir}/_vein" />	
+	<property name="vein.lib.dir" 			value="${basedir}/_vein/lib" />	
+	
+	<!-- project source and destination file paths -->
+	<property name="project.dir" 			value="${basedir}/show" />
+	<property name="source.js.dir" 			value="${project.dir}/devscripts" />
+	
+	<property name="core.js.dir" 				value="${source.js.dir}/core" />
+	<property name="lib.js.dir" 				value="${source.js.dir}/lib" />
+	<property name="observer.js.dir" 			value="${source.js.dir}/observer" />
+	<property name="framework.js.dir" 			value="${source.js.dir}/framework" />
+	<property name="data.js.dir" 				value="${source.js.dir}/data" />
+	<property name="contact.js.dir" 			value="${source.js.dir}/contact" />
+	<property name="header.js.dir" 				value="${source.js.dir}/header" />
+	<property name="home.js.dir" 				value="${source.js.dir}/home" />
+	<property name="nav.js.dir" 				value="${source.js.dir}/nav" />
+	<property name="portfolio.js.dir" 			value="${source.js.dir}/portfolio" />
+	<property name="overview.js.dir" 			value="${portfolio.js.dir}/overview" />
+	<property name="abstract.js.dir" 			value="${portfolio.js.dir}/abstract" />
+	<property name="three.js.dir" 				value="${portfolio.js.dir}/three" />
+	<property name="develop.js.dir" 			value="${portfolio.js.dir}/develop" />
+	<property name="profile.js.dir" 			value="${source.js.dir}/profile" />
+	<property name="scripts.js.dir" 			value="${source.js.dir}/scripts" />
+	<property name="skills.js.dir" 				value="${source.js.dir}/skills" />
+	
+	
+	
+	<property name="build.js.dir" 			value="${project.dir}/brainscripts" />
+	
+	<!-- targets -->
+	<target name="main" depends="concatJS, compressJS" />	
+    
+	<target name="concatJS">    
+    	<concat destfile="${build.js.dir}/brain.show.js" force="true" fixlastline="true" encoding="UTF-8" outputencoding="UTF-8">
+    	
+    		<!-- lib -->    		
+			
+			<filelist dir="${core.js.dir}" 				files="init.js, events.js" />
+			<filelist dir="${observer.js.dir}" 			files="navigation.js, site.js" />
+			
+			<filelist dir="${lib.js.dir}" 				files="babylon.js, scrollView.js" />
+			
+			<filelist dir="${framework.js.dir}" 		files="controller.js, view.js" />
+			<filelist dir="${data.js.dir}" 				files="developItems.js, homeItems.js, portfolioItems.js, profileItems.js, scriptsItems.js, skillsItems.js, threeItems.js" />
+			
+			<filelist dir="${header.js.dir}" 			files="controller.js, view.js" />
+			<filelist dir="${home.js.dir}" 				files="model.js, controller.js, view.js" />
+			<filelist dir="${contact.js.dir}" 			files="controller.js, view.js" />
+			<filelist dir="${nav.js.dir}" 				files="controller.js, view.js" />
+			
+			<filelist dir="${develop.js.dir}" 			files="model.js, controller.js, view.js" />
+			<filelist dir="${overview.js.dir}" 			files="controller.js, view.js" />
+			<filelist dir="${abstract.js.dir}" 			files="controller.js" />
+			<filelist dir="${three.js.dir}" 			files="model.js, controller.js" />
+			<filelist dir="${profile.js.dir}" 			files="model.js, controller.js, view.js" />
+			<filelist dir="${scripts.js.dir}" 			files="model.js, controller.js, view.js" />
+			<filelist dir="${skills.js.dir}" 			files="model.js, controller.js, view.js" />
+			
+			</concat>
+			
+	</target>
+	
+	<target name="compressJS">
+		<apply executable="java" parallel="true">
+	        <filelist dir="${build.js.dir}" files="brain.show.js" />
+	        <arg line="-jar" />
+	        <arg path="${yui-compressor}" />
+	        <srcfile />
+	        <arg line="-o" />
+	        <mapper type="glob" from="*.js" to="${build.js.dir}/brain.show.js" />
+	        <targetfile />
+	    </apply>
+	</target> 	
+</project>

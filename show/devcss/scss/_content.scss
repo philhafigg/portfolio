@@ -1,0 +1,37 @@
+#content {
+	
+	height:		calc(100% - 40px);
+	height:		-webkit-calc(100% - 40px);
+	height:		-moz-calc(100% - 40px);
+	display: 	block;
+	margin-top: 40px;
+	overflow-x: hidden;
+	overflow-y:	hidden;
+	position: 	relative;
+	width: 		100%;
+	z-index:	2;
+	
+	.loadingScreen {
+		
+		p {
+			
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
+
+.noMessage {
+	
+	display: 	block;
+	position: 	relative;
+	text-align: center;
+	width: 		100%;
+	
+	span {
+		
+		color: 		$defaultFontColor;
+		font-size: 	14px;
+		line-height: 50px;
+	}
+}

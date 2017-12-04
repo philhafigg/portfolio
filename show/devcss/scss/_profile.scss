@@ -1,0 +1,182 @@
+#content.profile {
+	
+	height:		100%;
+	overflow-y: auto;
+	
+	&.hidden {
+		
+		div {
+		
+			h1 {
+				
+				transform: 		translateY(50px);	
+			}
+		}
+	}
+	
+	> section {
+		
+		padding-left: 	10%;
+		width: 			90%;
+		
+	}
+	
+	div.over {
+		
+		overflow: 		hidden;
+	}
+	
+	
+	
+	h1 {
+				
+		font-size: 		20px;
+		padding-bottom: 10px;
+		transform: 		translateY(0px);
+		transition: 	transform 0.5s ease;
+	}
+	
+	h2 {
+		
+		font-size: 		14px;
+		padding-bottom: 5px;
+	}
+	
+	.front-items {
+		
+		background-color: 	rgba(255, 255, 255, 0.13);
+		color: 				$defaultFontColor;
+		height:				150px;
+		padding-top: 		50px;
+		padding-bottom: 	60px;
+
+		
+		section {
+			
+			display: 		inline-block;
+			float: 			left;
+			margin-right: 	12%;
+			
+			img {
+			
+				width: 150px;
+			}
+			
+			&:last-child {
+				
+				margin-right: 0px;
+			}
+		}
+	}
+	
+	.about-items {
+		
+		color: 				$defaultFontColor;
+		line-height: 		20px;
+		padding-top: 		50px;
+		padding-bottom: 	70px;
+		
+		h1 {
+			
+			text-align: 	left;
+		}
+		
+		p {
+			font-size: 		12px;
+			padding-top: 	20px;
+			padding-right: 	5%;
+			text-align: 	justify;
+			text-justify: 	inter-word;
+		}
+	}
+	
+	.education-items, .work-items {
+		
+		display: 		table-cell;
+		position: 		relative;
+		font-size: 		12px;
+		padding-top: 	50px;
+		padding-bottom: 50px;
+		padding-left: 	10%;
+		width: 			50vw;
+		
+		h1 {
+			
+			padding-bottom: 0px;
+		}
+		
+		table {
+			border-collapse: 	separate;
+			border-spacing: 	0 2em;
+			padding-top: 		2%;
+			
+			tr {
+				
+				padding-bottom: 5%;
+				padding-top: 	5%;
+				
+				td {
+					
+					line-height: 		16px;
+					
+					&:first-child {
+						
+						text-align: 	center;
+						vertical-align: top;
+						width: 			5%;
+					}
+					
+					&:nth-child(2) {
+						
+						padding-left: 	10%;
+					}
+				}
+			}
+		}
+	}
+	
+	.education-items {
+		
+		background-color: 	$lightGrey;
+		color: 				$defaultFontColor;
+	}
+	
+	.work-items {
+		
+		background-color: 	$grey;
+		color: 				$defaultFontColor;
+	}
+}
+
+.brain-max-width-750 {
+	
+	#content.profile {
+		
+		.education-items, .work-items {
+			
+			display: block;
+			width: 	90%;
+		}
+		
+		.front-items {
+		
+			height: 200px;
+			
+			.personal-items, .language-items {
+				
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.brain-max-width-420 {
+	
+	#content.profile {
+		
+		.front-items {
+		
+			height: 320px;
+		}
+	}
+}

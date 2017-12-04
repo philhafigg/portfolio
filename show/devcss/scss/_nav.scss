@@ -1,0 +1,366 @@
+#nav {
+
+	height:			calc(100% - 30px);
+	position: 		absolute;
+	width: 			100%;
+	z-index: 		20;
+	transition: 	all .5s;
+	
+	div.social {
+		
+		position: 	absolute;
+		margin: 	15px;	
+							
+		a {
+
+			transition: 	all 0.3s ease-in;
+			height: 		46px;
+			top:			0px;
+			left: 			0px;
+			position: 		absolute;
+			width: 			46px;
+
+			&:hover {
+				
+				transform: scaleX(-1);
+				
+			}
+			
+			&:after {
+				top:		0px;
+				left: 		0px;
+				position: 	absolute;
+				content: 	url('../content/images/contact/twitter.svg');
+				z-index: 	100;
+			}
+		}
+	}	
+	
+	div.burgerButton {
+		
+		
+		position: absolute;
+		right: 24px;
+		top: 20px;
+		width: 30px;
+		cursor: pointer;
+		display: none;
+		
+		span {
+			
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+			background: $defaultFontColor;
+			-webkit-transition: all 0.2s 0.2s;
+			transition: all 0.2s 0.2s;
+			
+			&:nth-child(1) {
+				
+				margin-top: -4px;
+			}
+			
+			&:nth-child(2) {
+				
+				margin-top: 4px;
+			}
+		}
+	}
+	
+	ul {
+			
+		display: 			flex;
+		height: 			100%;
+		transition: 		all .5s;
+		justify-content: 	center;	
+		flex-direction: 	column;
+		align-items:		center;
+		
+		li {
+			
+			font-family: 		sans-serif;
+			text-align: 		center;
+			text-transform: 	uppercase;
+			line-height: 		40px;
+			margin-top: 		7%;
+			height:				40px;
+			width:				130px;
+			transition: 		all .2s;
+			transform: 			translateX(0%);
+			
+			&:first-child {
+				
+				margin-top: 0%;
+			}
+
+		
+			
+			&.selected {
+				
+				a {
+					
+					font-weight: 600;
+				}
+			}
+			
+			a {
+				&:after, &:before {
+					
+					content: '';
+					position: absolute;
+					top: 		0;
+					left: 		0;
+					bottom: 	0;
+					right: 		0;
+					border: 	1px solid $defaultFontColor;
+					transition: all .5s;
+				}
+					
+				&:after {
+					
+					transform: translate(3px, 3px);
+				}
+						
+				&:before {
+					
+					transform: translate(-3px, -3px);
+				}
+					
+				&:hover {
+					
+					&:after, &:before {
+						
+						transform: translate(0);
+					}
+				}
+			}
+					
+			a {
+				color: $defaultFontColor;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
+#nav.top {
+
+	$gold: 			$defaultFontColor;
+    $cubic-bezier: 	cubic-bezier(.2,.3,.25,.9);
+
+	height: 	40px;
+	display: 	block;
+
+	background-color: $lightGrey;
+	
+	div.social {
+		
+		display: none;
+	}
+	
+	ul {
+	
+		display: 			flex;
+		justify-content:	center;
+		top:				10px;
+		height:				auto;
+		flex-direction: 	row;
+		align-items:		inherit;
+
+		li {
+			position: 			relative;
+			display: 			flex;
+			left: 				auto;
+			top: 				inherit;
+			text-align: 		center;
+			font-size: 			12px;
+			line-height: 		12px;
+			text-decoration: 	none;
+			text-transform: 	uppercase;
+			white-space: 		nowrap;
+			background-color: 	transparent;
+			border: 			0;
+			cursor: 			pointer;
+			transition: 		all 0.2s $cubic-bezier 0s;
+			color: 				$gold;
+			display: 			inline-flex;
+			margin: 			0;
+			padding: 			2px;
+			letter-spacing: 	0.2em;
+			height: 			15px;
+			width: 				100px;
+			
+			&.hidden {
+				
+				display: none;
+			}
+			
+			&.home {
+				
+				display: none;
+			}
+
+			a {
+
+				color: 		$defaultFontColor;
+				
+				&:after, &:before {
+				
+					border: none;	
+				}
+			}
+
+			&:after {
+
+				content: 	'';
+				left: 		50%;
+				height: 	1px;
+				bottom: 	0px;
+				transform: 	translatex(-50%);
+				transition: width 0.2s $cubic-bezier 0.4s, background 0.2s $cubic-bezier 0.4s;
+				display: 	block;
+				position: 	absolute;
+				background: $gold;
+				width: 		60%;
+			}
+
+			&:hover {
+				
+				opacity: 			1;
+				outline: 			0;
+				text-decoration: 	none;
+				transition: 		color 0.2s $cubic-bezier 0s;
+
+				&:after {
+					
+					background: $defaultFontColor;
+					transition: width 0.2s $cubic-bezier 0s, background 0.2s $cubic-bezier 0s;
+					width: 		90%;
+				}
+			}
+		}
+	}
+}
+
+.brain-max-width-520, .brain-max-height-500 {
+	
+	#nav ul li {
+		
+		display: block;
+		
+		&.portfolio {
+
+			top:	10vh;
+		}
+
+		&.scripts {
+
+			top:	30vh;
+		}
+
+		&.skills {
+
+			top:	25vh;
+		}
+
+		&.profile {
+
+			top:	40vh;
+		}
+
+		&.contact {
+
+			top:	55vh;
+		}
+	}
+	
+	#nav.top {
+		
+		div.burgerButton {
+		
+			display: block !important;
+		}
+		
+		position: 	absolute;
+		height:		40px;
+		overflow: 	hidden;
+		top:		0px;
+		
+		ul {
+			flex-direction: column;
+			width: 			100%;
+			
+			li {
+				
+				display: 		block;
+				height: 		30px;
+				padding-top: 	6px;
+				line-height: 	30px;
+				left: 			auto;
+				order:			2;
+				top: 			auto;
+				transform: 		none;
+				width: 			100%;
+				transition: 	height 0.5s linear;
+				
+				&.selected {
+				
+					order: 1;
+				}
+				
+				&:after {
+					
+					bottom: 5px;
+				}
+			}
+		}
+		
+		&.nav-open {
+			
+			height:		250px;
+			
+			li {
+				
+				height: 50px;
+			}
+		}
+	}
+	
+	&.isMobile {
+		
+		#nav.top ul {
+			
+			&.nav-open {
+				
+				height:		250px;
+				
+				li {
+				
+					height: 50px;
+				}
+			}
+		}
+	}
+	
+	&.isDesktop {
+		
+		#nav.top {
+			
+			&:hover {
+			
+				height:		250px;
+				
+				li {
+					
+					height: 50px;
+				}
+			}
+		}
+	}
+}

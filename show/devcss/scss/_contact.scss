@@ -1,0 +1,224 @@
+#content.contact {
+	
+	display: flex;
+	
+	> section {
+		
+		margin-top: 	50px;
+	}
+	
+	h1 {
+			
+		color: 		$defaultFontColor;
+		font-size: 	$biggerFontSize;
+	}
+	
+	.contact-form {
+		
+		margin-left: 	10%;
+		width: 			50%;
+		
+		.submitForm {
+			
+			display: 			flex;
+			justify-content: 	flex-end;
+			width: 				90%;
+			
+			li {
+
+				
+				padding-left: 	5%;
+				margin-top:		20px;
+				
+				a {
+					
+					color: 		$defaultFontColor;
+					font-size: 	$bigFontSize;
+				}
+			}	
+		}
+		
+		.message-notification {
+			
+			font-size: 		14px;
+			font-weight:	500;
+			opacity: 		0;
+			padding: 		7px;
+			transition: 	all 0.5s ease-in;
+			
+			&.message-sent {
+				
+				opacity: 1;
+			}
+		}
+		
+		.form-style-8{
+			
+		    font-family: 			'Open Sans Condensed', arial, sans;
+		    width: 					80%;
+		    padding: 				5%;
+		    background: 			$lightGrey;
+		    margin-top: 			5%;
+		    box-shadow: 			0px 0px 10px rgba(0, 0, 0, 0.22);
+		    -moz-box-shadow: 		0px 0px 10px rgba(0, 0, 0, 0.22);
+		    -webkit-box-shadow:  	0px 0px 10px rgba(0, 0, 0, 0.22);
+
+		}
+		
+		.form-style-8 h2{
+			
+		    background: 	#4D4D4D;
+		    text-transform: uppercase;
+		    font-family: 	'Open Sans Condensed', sans-serif;
+		    color: 			#797979;
+		    font-size: 		18px;
+		    font-weight: 	100;
+		    padding: 		20px;
+		    margin: 		-30px -30px 30px -30px;
+		}
+		
+		.form-style-8 input[type="text"],
+		.form-style-8 input[type="date"],
+		.form-style-8 input[type="datetime"],
+		.form-style-8 input[type="email"],
+		.form-style-8 input[type="number"],
+		.form-style-8 input[type="search"],
+		.form-style-8 input[type="time"],
+		.form-style-8 input[type="url"],
+		.form-style-8 input[type="password"],
+		.form-style-8 textarea,
+		.form-style-8 select 
+		{
+		    box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    outline: none;
+		    display: block;
+		    width: 100%;
+		    padding: 7px;
+		    border: none;
+		    border-bottom: 1px solid #ddd;
+		    background: transparent;
+		    margin-bottom: 10px;
+		    font: 16px Arial, Helvetica, sans-serif;
+		    height: 45px;
+		}
+		.form-style-8 textarea{
+		   
+		    resize:none;
+		    overflow: hidden;
+		}
+	}
+	
+	.contact-infos {
+		
+// 		http://www.dafont.com/de/social-icons-pro-set.font
+		display: 		inline-block;
+		float:			right;
+		width: 			40%;
+		
+		.links {
+			
+			font-family: socialMedia;
+			margin-top: 5%;
+			
+			li {
+				
+				display: inline-block;
+				line-height: 45px;
+				
+				a {
+					
+					transition: 	all 0.3s ease-in;
+					height: 		38px;
+					width: 			38px;
+					display: 		block;
+					top: 			-5px;
+					padding-left: 	5px;
+					padding-right: 	6px;
+					position: 		relative;
+					
+					
+					&:hover {
+						
+						
+						transform: scaleX(-1);
+						
+					}
+					
+					
+					&.youtube {
+						
+						&:before {
+
+							content: 	url('../content/images/contact/youtube.svg');
+						}
+					}
+					
+					&.facebook {
+						
+						&:before {
+
+							content: 	url('../content/images/contact/facebook.svg');
+						}
+					}
+					
+					&.twitter {
+						
+						&:before {
+
+							content: 	url('../content/images/contact/twitter.svg');
+						}
+					}
+					
+					&.artstation {
+						
+						&:before {
+
+							content: 	url('../content/images/contact/artstation.svg');
+						}
+					}
+				}
+			}
+		}
+		
+		table {
+			
+			color: white;
+			
+			tr {
+				
+				line-height: 25px;
+			
+				td {
+					
+					&:first-child {
+						
+						display: 		block;
+						margin-right: 	30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.brain-max-width-620 {
+	
+	#content.contact {
+		
+		display: inherit;
+		overflow-y: auto;
+		
+		.contact-form, .contact-infos {
+		
+			display: block;
+			width: 90%;
+		}
+		
+		.contact-infos {
+			
+			padding-bottom: 50px;	
+		}
+	}
+}

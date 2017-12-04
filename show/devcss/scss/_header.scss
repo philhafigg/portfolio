@@ -1,0 +1,15 @@
+#header {
+
+	overflow:			hidden;
+	pointer-events: 	none;
+	position:			relative;
+	width:				100%;
+	z-index: 			1;
+		
+	h1 {
+		
+		font-size: 		$hide;
+		position:		relative;
+		text-transform:	uppercase;	
+	}
+}

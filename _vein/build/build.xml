@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="brainVisual vein" default="main" basedir="/Sites/personal/">	
+	
+	<!-- library paths -->
+	<property name="lib.dir" 			value="/usr/local/Cellar/yuicompressor/2.4.8/libexec" />	
+	<property name="yui-compressor" 	location="${lib.dir}/yuicompressor-2.4.8.jar" />
+	
+	<!-- project source and destination file paths -->
+	<property name="build.js.dir"		value="${basedir}/_vein" />
+	
+	<!-- targets -->
+	<target name="main" depends="concatJS, compressJS" />	
+    
+	<target name="concatJS">    
+    	<concat destfile="${build.js.dir}/brain.vein.3.0.new.js" force="true" fixlastline="true" encoding="UTF-8" outputencoding="UTF-8">
+    	
+			<filelist dir="${build.js.dir}"	files="brain.vein.3.0.js" />
+		</concat>
+	</target>
+	
+	<target name="compressJS">
+		<apply executable="java" parallel="true">
+	        <filelist dir="${build.js.dir}" files="brain.vein.3.0.new.js" />
+	        <arg line="-jar" />
+	        <arg path="${yui-compressor}" />
+	        <srcfile />
+	        <arg line="-o" />
+	        <mapper type="glob" from="*.js" to="${build.js.dir}/brain.vein.3.0.min.js" />
+	        <targetfile />
+	    </apply>
+	</target>
+</project>
