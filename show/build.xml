@@ -14,7 +14,6 @@
 	<property name="source.js.dir" 			value="${project.dir}/devscripts" />
 	
 	<property name="core.js.dir" 				value="${source.js.dir}/core" />
-	<property name="lib.js.dir" 				value="${source.js.dir}/lib" />
 	<property name="observer.js.dir" 			value="${source.js.dir}/observer" />
 	<property name="framework.js.dir" 			value="${source.js.dir}/framework" />
 	<property name="data.js.dir" 				value="${source.js.dir}/data" />
@@ -24,7 +23,6 @@
 	<property name="nav.js.dir" 				value="${source.js.dir}/nav" />
 	<property name="portfolio.js.dir" 			value="${source.js.dir}/portfolio" />
 	<property name="overview.js.dir" 			value="${portfolio.js.dir}/overview" />
-	<property name="abstract.js.dir" 			value="${portfolio.js.dir}/abstract" />
 	<property name="three.js.dir" 				value="${portfolio.js.dir}/three" />
 	<property name="develop.js.dir" 			value="${portfolio.js.dir}/develop" />
 	<property name="profile.js.dir" 			value="${source.js.dir}/profile" />
@@ -46,8 +44,6 @@
 			<filelist dir="${core.js.dir}" 				files="init.js, events.js" />
 			<filelist dir="${observer.js.dir}" 			files="navigation.js, site.js" />
 			
-			<filelist dir="${lib.js.dir}" 				files="babylon.js, scrollView.js" />
-			
 			<filelist dir="${framework.js.dir}" 		files="controller.js, view.js" />
 			<filelist dir="${data.js.dir}" 				files="developItems.js, homeItems.js, portfolioItems.js, profileItems.js, scriptsItems.js, skillsItems.js, threeItems.js" />
 			
@@ -58,7 +54,6 @@
 			
 			<filelist dir="${develop.js.dir}" 			files="model.js, controller.js, view.js" />
 			<filelist dir="${overview.js.dir}" 			files="controller.js, view.js" />
-			<filelist dir="${abstract.js.dir}" 			files="controller.js" />
 			<filelist dir="${three.js.dir}" 			files="model.js, controller.js" />
 			<filelist dir="${profile.js.dir}" 			files="model.js, controller.js, view.js" />
 			<filelist dir="${scripts.js.dir}" 			files="model.js, controller.js, view.js" />

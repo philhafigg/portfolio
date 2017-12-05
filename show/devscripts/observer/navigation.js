@@ -84,7 +84,7 @@ brain.namespace.extend( 'visual.show.observer.navigation', function() {
 		
 		$('#content').addClass(config.view.page);
 		$('#content').html(this.getPlaceholder());
-
+		
 		$('#nav .' + tClass).removeClass('selected');
 		$('#nav .' + config.view.page).addClass('selected');
 

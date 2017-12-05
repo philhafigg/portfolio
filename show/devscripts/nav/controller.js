@@ -115,16 +115,11 @@ brain.namespace.extend( 'visual.show.nav.controller', function(frameId) {
 				
 /*
 			} else if ($('#' + this.frameId).hasClass('isMobile') && $('#' + this.frameId + ' #nav').hasClass('top')) {
-
+				debugger;
 */
 				
 								
 			} else {
-				
-				if (!$('#' + this.frameId + ' #nav').hasClass('top')) $('#' + this.frameId + ' #nav').addClass('top');
-				
-				$('#' + this.frameId + ' #nav.top').removeClass('nav-open');
-				$('#' + this.frameId + ' #content').removeClass('hidden');
 
 				var tId					=	$(ev.target).attr('data-page');
 				var config				=	brain.items[ this.frameId ].config;
@@ -134,7 +129,9 @@ brain.namespace.extend( 'visual.show.nav.controller', function(frameId) {
 					
 				$(document).triggerHandler( tEvent );
 					
+				$('#' + this.frameId + ' #nav').addClass('top');
 				
+				$('#' + this.frameId + ' #nav.top').removeClass('nav-open');
 			
 			}
 		}

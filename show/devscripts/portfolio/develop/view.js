@@ -21,7 +21,7 @@ brain.namespace.extend( 'visual.show.portfolio.detail.view', function(frameId) {
 				
 				$.each(this.pictures, function(){
 					
-					tHtml	+=	'<a data-fancybox="gallery" href="content/images/portfolio/' + this + '"><img src="content/images/portfolio/' + this + '"></a>';
+					tHtml	+=	'<img src="content/images/portfolio/' + this + '">';
 				});
 				
 				if (this.pictures.length > 1) tHtml	+=	'<div class="portfolio-animated-bars"></div>';
@@ -43,19 +43,6 @@ brain.namespace.extend( 'visual.show.portfolio.detail.view', function(frameId) {
 				if (this.sections) {
 					
 					tHtml	+=	'<p class="sections">' + this.sections + '</p>';
-				}
-				
-				if (this.link) {
-					
-					tHtml += '<ul>';
-					
-					$.each(this.link , function(key, value){
-						
-						tHtml	+=	'<li><a href="' + value + '" target="_blank">>Link ' + key + '<</a></li>';
-					});
-					
-					tHtml += '<ul>';
-					
 				}
 				
 				tHtml	+=	'</section>';
@@ -86,7 +73,7 @@ brain.namespace.extend( 'visual.show.portfolio.detail.view', function(frameId) {
 					
 					$.each(this.link , function(key, value){
 						
-						tHtml	+=	'<li><a href="' + value + '" target="_blank">>Link ' + key + '<</a></li>';
+						tHtml	+=	'<li><a href="' + this.link + '">>Link ' + key + '<</a></li>';
 					});
 					
 					tHtml += '<ul>';
@@ -98,9 +85,8 @@ brain.namespace.extend( 'visual.show.portfolio.detail.view', function(frameId) {
 				
 				$.each(this.pictures, function(){
 					
-					tHtml	+=	'<a data-fancybox="gallery" href="content/images/portfolio/' + this + '"><img src="content/images/portfolio/' + this + '"></a>';
+					tHtml	+=	'<img src="content/images/portfolio/' + this + '">';
 				});
-				
 				if (this.pictures.length > 1) tHtml	+=	'<div class="portfolio-animated-bars"></div>';
 				
 				tHtml	+=	'</section>';

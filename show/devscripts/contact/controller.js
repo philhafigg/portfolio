@@ -91,7 +91,7 @@ brain.namespace.extend( 'visual.show.contact.controller', function(frameId) {
 */
 		if (config.allowMail) {
 			
-			emailjs.send("gmail", "emailtemplate", {"from_name":name,"reply_to":mailAd,"message_html":input});
+			emailjs.send("gmail", "emailtemplate", {"to_name":name,"reply_to":mailAd,"message_html":input});
 		}
 		
 		$('#content.contact .message-notification').addClass('message-sent');
